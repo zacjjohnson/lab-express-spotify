@@ -1,0 +1,11 @@
+body {
+    background-image: url('../images/spotify-background.jpeg');
+    background-size: 100vw;
+    background-repeat: no-repeat;
+}
+
+footer {
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+}

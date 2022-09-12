@@ -9,3 +9,16 @@ footer {
     justify-content: left;
     align-items: baseline;
 }
+
+.searchResults {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.artistsInfo {
+    color: black;
+    padding: 15px;
+}

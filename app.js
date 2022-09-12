@@ -31,16 +31,15 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/artist-search', (req, res, next) => {
-    console.log({query: req.query.name});
+    console.log({query: req.query.artist});
     spotifyApi
     .searchArtists(req.query.artist)
     .then(data => {
-        // data = {
-        //     artists: data
-        // }
-        console.log(data.body.artists.items)
-    console.log('The received data from the API: ', data.body);
-    res.render('artist-search-results', {artists: data.body.artists.items});
+        let photo = data.body.artists.items[0].images[0];
+        console.log(photo)
+        
+        console.log('The received data from the API: ', data.body.artists.items);
+        res.render('artist-search-results', {artists: data.body.artists.items, photo: data.body.artists.items[0].images[0].url});
     
     
   })
